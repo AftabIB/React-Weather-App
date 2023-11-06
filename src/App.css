@@ -1,0 +1,125 @@
+@import url("https://fonts.googleapis.com/css2?family=Unbounded&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Unbounded", cursive;
+}
+
+/* Hide horizontal scrollbar */
+body {
+  overflow-x: hidden;
+}
+
+/* Background image styling */
+.bg_img {
+  width: 100%;
+  min-height: 100vh;
+  background: url("https://images.unsplash.com/photo-1580193769210-b8d1c049a7d9?auto=format&fit=crop&q=80&w=2074&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D") no-repeat center center/cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: #fff;
+}
+
+/* Rest of your existing styles */
+.input {
+  background-color: rgba(255, 255, 255, 0.526);
+  width: 30%;
+}
+
+.group {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  margin: 1rem 0;
+}
+
+.city {
+  margin-top: 2rem;
+}
+
+.city,
+.temp {
+  font-size: 3rem;
+}
+
+.box_container {
+  margin-top: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 25px;
+}
+
+.box {
+  padding: 1rem;
+  border-radius: 12px;
+  background-color: rgba(0, 0, 0, 0.75);
+  width: 220px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  transition: transform 0.2s;
+}
+
+.box:hover {
+  transform: scale(1.1);
+}
+
+/* Add this CSS to your App.css file or a separate CSS file */
+.search-history {
+  margin-top: 20px;
+  padding: 10px;
+  background-color: #f1f1f1;
+  border-radius: 5px;
+  padding: 1rem;
+  border-radius: 12px;
+  background-color: rgba(0, 0, 0, 0.75);
+  width: 220px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 20px;
+  padding: 20px;
+}
+
+.search-history h2 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.search-history ul {
+  list-style: none;
+  padding: 0;
+}
+
+.search-history li {
+  font-size: 16px;
+  margin-bottom: 5px;
+}
+
+/* Style for individual search history items */
+.search-history li::before {
+  content: "•";
+  margin-right: 5px;
+  color: #333;
+}
+
+@media only screen and (max-width: 730px) {
+  .bg_img {
+    padding: 2rem 0;
+  }
+
+  .box_container {
+    flex-direction: column;
+  }
+
+  .box,
+  .input {
+    width: 70vw;
+  }
+}
